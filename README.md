@@ -11,7 +11,7 @@
 - Install HashiCorp Terraform VSCode Extension
 
 
-### Steps
+### 1. Creating an AWS EC2 Instance
 
 #### Set your AWS keys
 `export AWS_ACCESS_KEY_ID=`
@@ -88,3 +88,19 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 
 This step creates: terraform.tfstate
 The Terraform state file is the only way Terraform can track which resources it manages, and often contains sensitive information, so you must store your state file securely and restrict access to only trusted team members who need to manage your infrastructure.
+
+
+### 2. Connecting to EC2 Instance via SSH
+
+- Create SSH keys on AWS (in this example: "your_pem_file_name")
+- Give SSH permissions
+- Download your .pem file
+
+- Recreate the instance
+`terraform apply`
+
+- Handle permissions
+`chmod 400 "$your_pem_file_name.pem"`
+
+- Connect to AWS EC2 Instance
+`ssh -i "$your_pem_file_name.pem" ubuntu@$your_instance_open_DNS`

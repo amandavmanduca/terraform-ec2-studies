@@ -16,7 +16,7 @@ provider "aws" {
 resource "aws_instance" "app_server" {
   ami           = "ami-008fe2fc65df48dac"
   instance_type = "t2.micro"
-
+  key_name      = "your_pem_file_name"
   tags = {
     Name = "TerraformFirstServerInstance"
   }
