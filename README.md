@@ -90,6 +90,8 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 This step creates: terraform.tfstate
 The Terraform state file is the only way Terraform can track which resources it manages, and often contains sensitive information, so you must store your state file securely and restrict access to only trusted team members who need to manage your infrastructure.
 
+![image](https://github.com/amandavmanduca/terraform-ec2-studies/assets/58530162/ccf0a280-e561-4778-b391-5a97af14b0dc)
+
 
 ### 2. Connecting to EC2 Instance via SSH
 
